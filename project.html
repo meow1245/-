@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8" />
+<title>央央景點大富翁</title>
+<style>
+  h1{
+    text-align: center;
+    font-size: 50px;
+  }
+
+  body{
+    /*background-color: rgba(255, 255, 255, 0.2);*//*遮罩*/
+    /*background-blend-mode: multiply;*/
+    background-image: url("img/背景.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  table {
+    margin-left:auto; 
+    margin-right:auto;
+    /*border-collapse: collapse;*/
+
+    width: 60%;
+  }
+  th{
+    /*background-color: rgba(255, 255, 255, 0.6);*/
+    font-size: 40px;
+    color: rgb(14, 22, 87);
+  }
+  /*td {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding-left:100px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-right: 100px;
+    padding: 0px;
+    border-width: 4px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    font-size: 50px;
+    font-weight: 800;
+    }*/
+  </style>
+    
+</head>
+<body>
+
+        <h1>央央大富翁</h1>
+        <table border="1" >
+        <tr>    
+          <!--<th colspan="2"></th>-->
+          <td>
+            <img src="img/正門.png" width="100%" height="100%"></td></td>
+          <td><!---2.大象雕塑-->
+            <img src="img/大象雕塑.png" width="100%" height="100%"></td>
+          <td><!---3.男九垃圾場-->
+            <img src="img/拖進垃圾車.png" width="100%" height="100%"></td>
+          <td >
+            <!---4.小木屋-->
+            <img src="img/小木屋.png" width="100%" height="100%">
+        </td>
+          <td>
+            <img src="img/中大湖.png" width="100%" height="100%">
+          </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="img/觀景台.png" width="100%" height="100%">
+            </td>
+
+
+            <th colspan="3", rowspan="3">
+                <!--歡迎來到<br>\央央大富翁-->
+                <p>請點擊骰子以移動</p>
+                
+                <p>剩餘次數： <span id="time">10</span></p>
+                <p>投擲數字： <span id="position">0</span></p>
+                <!--<input type="hidden" id="steps" name="steps" value="0">
+                </form>-->
+                <button id = "click" onclick="rollDice()" style="min-height: 50px; min-width: 200px; font-size: 20px;">Roll Dice</button>
+                </div>
+                <script>
+                var time = 9;
+                function rollDice() {
+                    document.getElementById("time").textContent = time--;
+                    if(time < 0){
+                      document.getElementById ( "click" ).style.display = "none";
+                    }
+                    var steps = Math.floor(Math.random() * 6) + 1; // Roll a dice (1-6)
+                    document.getElementById("position").textContent = steps;
+                    document.getElementById("steps").value = steps;
+                    }
+                </script>
+            
+            </th>
+            <td>
+                <img src="img/壘球場.png" width="100%" height="100%">
+            </td>
+        </tr>
+        <!--<tr><td colspan="5">48 months</td></tr>-->
+        <!--<tr><td rowspan="4">iphone 15</td></tr>-->
+        <tr>
+          <td ><!---15.太極銅雕--><img src="img/太極銅雕.png" width="100%" height="100%"></td>
+          <td>
+            <img src="img/依仁堂.png" width="100%" height="100%">
+          </td>
+        </tr>
+        <tr>
+            <td>
+                <!---14.校史館-->
+                <img src="img/大講堂.png" width="100%" height="100%" >
+            </td>
+            <td>
+                <img src="img/OLOO.png" width="100%" height="100%">
+            </td>
+        </tr>
+        <tr>
+            <td><!---13.游藝館(機會)--><img src="img/游藝館.png" width="100%" height="100%"></td>
+            <td>
+                <img src="img/百花川.png" width="100%" height="100%">
+            </td>
+            <td><img src="img/宵夜街.png" width="100%" height="100%"></td>
+            <td><img src="img/女生宿舍.png" width="100%" height="100%"></td>
+            <td><img src="img/松苑餐廳.png" width="100%" height="100%"></td>
+        </tr>
+      </table>
+</body>
+</html>
